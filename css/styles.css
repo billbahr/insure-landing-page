@@ -1,0 +1,76 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    /* primary colors */
+    --dkviolet: hsl(256, 26%, 20%);
+    --grayblue: hsl(216, 30%, 68%);
+ 
+    /* neutral colors */
+    --verydkviolet: hsl(270, 9%, 17%); 
+    --dkgrayviolet: hsl(273, 4%, 51%); 
+    --veryltgray: hsl(0, 0%, 98%);
+
+    --serif: "DM Serif Display", serif;
+    --sans: "Karla", Helvetica, sans-serif;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--sans);
+    background-color: var(--veryltgray);
+    margin: 1rem;
+    color: var(--verydkviolet);
+}
+h1, h2, h3 {
+    font-family: var(--serif);
+    margin: 0;
+}
+nav {
+    padding: 1rem;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+nav a {
+    color: var(--dkgrayviolet);
+    text-decoration: none;
+    display: block;
+}
+nav a:hover {
+    color: var(--grayblue);
+}
+p {
+    font-family: var(--sans);
+}
+#humanizing {
+    background-color: var(--dkviolet);
+    color: var(--veryltgray);
+    display: flex;
+}
+
+@media (min-width: 850px){
+    nav {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    nav li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
+  }
